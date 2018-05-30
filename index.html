@@ -4,12 +4,75 @@
 <meta charset="ISO-8859-1">
 <title>New Tab</title>
 </head>
-<body background="background.jpg">
+<body background="background2.jpg">
 </body>
 
+<style>
+/*
+	Weather
+*/
 
+setInterval(getLocationAndWeather, 180000)
 
+var weatherData = {
+	city: document.querySelector ("#city"),
+	weather: document.querySelector ("#weather"),
+	temperature: document.querySelector("#temperature"),
+	temperatureValue: 0,
+	units: "°C"
+};
 
+function roundTemperature(temperature){
+	temperature = temperature.toFixed(1);
+	return temperature;
+}
+
+function getLocationAndWeather(){
+	if (window.XMLHttpRequest){
+	var xhr = new XMLHttpRequest();
+	xhr.addEventListener("load", function() {
+		var response = JSON.parse(xhr.responseText);
+
+		console.log(response);
+		var position = {
+			latitude: response.latitude,
+			longitude: response.longitude
+		};
+		var cityName = response.city;
+
+		var weatherSimpleDescription = response.weather.simple;
+		var weatherDescription = response.weather.description;
+		var weatherTemperature = roundTemperature(response.weather.temperature);
+
+		weatherData.temperatureValue = weatherTemperature;
+
+		weatherData.city.innerHTML = cityName;
+		weatherData.weather.innerHTML =  weatherDescription;
+		weatherData.temperature.innerHTML = weatherTemperature + weatherData.units;
+	}, false);
+
+	xhr.addEventListener("error", function(err){
+		alert("Could not complete the request");
+	}, false);
+
+	xhr.open("GET", "https://fourtonfish.com/tutorials/weather-web-app/getlocationandweather.php?owapikey=e2db5b0453a25a492e87ad8b03046a7c&units=metric", true);
+	xhr.send();
+	} else {
+		alert("Unable to fetch the location and weather data.");
+	}
+} getLocationAndWeather();
+</style>
+
+<div>
+<ul>weather.
+			<li>
+				<div class="city"><span id="city"></span></div>
+				<div class="temp"><span id="temperature"></span></div>
+				<div class="forecast"><span id="weather"></span></div>
+			</li>
+		</ul>
+		</div>	
+		
 <style> 
 #myDIV {
     width: 250px;
