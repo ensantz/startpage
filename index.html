@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New Tab</title>
+</head>
+<body background="background2.jpg">
+</body>
+
+
+<style> 
+#myDIV {
+    width: 250px;
+    height: 50px;
+    position: relative;
+    left: 1060px;
+}
+</style>
+
+<div id="myDIV">
+
+<p id="string" style="color:white; font-family:Vladimir Script; font-size:70px"></p> 
+<p id="demo" style="color:white; font-family:Vladimir Script; font-size:70px"></p> 
+
+<script> 
+var mydate = new Date();
+var year = mydate.getYear() + 1900;
+var day = mydate.getDay();
+var month = mydate.getMonth();
+var daym = mydate.getDate();
+var dayarray = new Array("Sunday","Monday","Tuesday", "Wednesday", "Thursday" , "Friday", "Saturday");
+var montharray = new Array ("January","February","March", "April", "May" , "June", "July","August", "September", "October" , "November", "December"); 
+document.getElementById("string").innerHTML = dayarray[day] + " " +montharray[month]+ " "+daym+ ", " +year + "<br>";
+var currentTime = new Date(); 
+var h = currentTime.getHours();
+var myVar = setInterval(myTimer, 1000);
+function myTimer() { var d = new Date(); 
+document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+} 
+</script>
+</div>
+
+<p>&nbsp;</p>
+
+<div>
+   <head>
+        <style>          
+           .SearchBar {
+     position: absolute;
+     up:20px;
+     left: 330px;
+}
+.SearchBar input {
+     height: 20px;
+     width: 690px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="SearchBar">
+<form method="get" autocomplete="off" action="https://www.google.com/search">
+<input type="text" placeholder="Search" id="fname"  name="q" size="100" value="">
+            </form>
+        </div>
+    </body>
+</div>
+
+
+<!-- Initial Popup -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup {
+    position: absolute;
+    right: 610px;
+    top: 150px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #001c22;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 5%;
+    left: 50%;
+    margin-left: -70px;
+}
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: -8%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #001c22 transparent transparent transparent;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+</style>
+
+<!-- Popup 2 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup2 {
+    position: absolute;
+    right: 540px;
+    top: 457px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* The actual popup */
+.popup2 .popuptext2 {
+    visibility: hidden;
+    width: 140px;
+    background-color: #001c22;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+    left: 200%;
+    margin-left: -70px;
+}
+/* Popup arrow */
+.popup2 .popuptext2::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: -3%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #001c22 transparent transparent transparent;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+/* Toggle this class - hide and show the popup */
+.popup2 .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+</style>
+<!-- Popup 3 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup3 {
+    position: absolute;
+    right: 540px;
+    top: 437px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* The actual popup */
+.popup3 .popuptext3 {
+    visibility: hidden;
+    width: 140px;
+    background-color: #001c22;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+    left: 200%;
+    margin-left: -70px;
+}
+/* Popup arrow */
+.popup3 .popuptext3::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: -3%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #001c22 transparent transparent transparent;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+/* Toggle this class - hide and show the popup */
+.popup3 .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+</style>
+<!-- Popup 4 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup4 {
+    position: absolute;
+    right: 540px;
+    top: 437px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* The actual popup */
+.popup4 .popuptext4 {
+    visibility: hidden;
+    width: 140px;
+    background-color: #001c22;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+    left: 200%;
+    margin-left: -70px;
+}
+/* Popup arrow */
+.popup4 .popuptext4::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: -3%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #001c22 transparent transparent transparent;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+/* Toggle this class - hide and show the popup */
+.popup4 .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+</style>
+<!-- Popup 5 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup5 {
+    position: absolute;
+    right: 540px;
+    top: 509px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* The actual popup */
+.popup5 .popuptext5 {
+    visibility: hidden;
+    width: 140px;
+    background-color: #001c22;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+    left: 200%;
+    margin-left: -70px;
+}
+/* Popup arrow */
+.popup5 .popuptext5::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: -3%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #001c22 transparent transparent transparent;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+/* Toggle this class - hide and show the popup */
+.popup5 .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+</style>
+<!-- Table Construct -->
+<body style="text-align:center">
+<div class="popup" onmouseover="showpopup()" onmouseout="removepopup()">
+<table width='50'>
+<tbody>
+<tr>
+<td>
+<p id="myTEXT" style="color:#946925; font-family:Vladimir Script; font-size:70px"><u><span onmouseover="removepopup2();removepopup3();removepopup4();removepopup5()">Hello</span></u></p></td>
+</tr>
+<tr>
+    <td>
+    <p>&nbsp;</p>
+    </td> 
+    </tr>
+</tbody>
+</table>
+<!-- Popup 1 -->
+<span class="popuptext" id="myPopup">
+<table id="myTable" style="width:100%">
+<tbody>
+ <tr>
+        <td>
+<span onmouseover="showpopup2();removepopup3();removepopup4()"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Entertainment</text></font></span>
+    </td> 
+    </tr>
+    <tr>
+        <td>
+<span onmouseover="showpopup3();removepopup2();removepopup4()"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Business</text></font></span>
+    </td> 
+    </tr>
+    <tr>
+        <td>
+<span onmouseover="showpopup4();removepopup2();removepopup3()"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Banking</text></font></span>
+    </td> 
+    </tr>
+        <tr>
+        <td>
+<span onmouseover="showpopup5();removepopup2();removepopup3();removepopup4()"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Random</text></font></span>
+    </td> 
+    </tr>
+    </tbody>
+    </table>
+    </span>
+</div>
+<!-- Popup 2 -->
+<body style="text-align:center">
+<div class="popup2">
+<span class="popuptext2" id="myPopup2" onmouseover="showpopup2()" onmouseout="removepopup2()">
+<table id="myTable2" style="width:100%">
+<tbody>
+ <tr>
+        <td>
+<a href="https://www.youtube.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">YouTube</text></font></a>
+    </td> 
+    </tr>
+    <tr>
+        <td>
+<a href="https://www.reddit.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Reddit</text></font></a>
+    </td> 
+    </tr>
+     <tr>
+        <td>
+<a href="https://www.netflix.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Netflix</text></font></a>
+    </td> 
+    </tr>
+     <tr>
+        <td>
+<a href="https://www.4chan.org/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">4chan</text></font></a>
+    </td> 
+    </tr>
+     <tr>
+        <td>
+<a href="https://www.twitch.tv/.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Twitch</text></font></a>
+    </td> 
+    </tr>
+    </tbody>
+    </table>
+    </span>
+</div>
+<!-- Popup 3 -->
+<body style="text-align:center">
+<div class="popup3">
+<span class="popuptext3" id="myPopup3" onmouseover="showpopup3()" onmouseout="removepopup3()">
+<table id="myTable3" style="width:100%">
+<tbody>
+ <tr>
+        <td>
+<a href="https://mail.google.com/mail/u/0/#inbox" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Gmail</text></font></a>
+    </td> 
+    </tr>
+    <tr>
+        <td>
+<a href="https://www.linkedin.com/in/jeffrey-ali-03247b119/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Linkedin</text></font></a>
+    </td> 
+    </tr>
+    <tr>
+        <td>
+<a href="https://www.indeed.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Indeed</text></font></a>
+    </td> 
+    </tr>
+    </tbody>
+    </table>
+    </span>
+</div>
+<!-- Popup 4 -->
+<body style="text-align:center">
+<div class="popup4">
+<span class="popuptext4" id="myPopup4" onmouseover="showpopup4()" onmouseout="removepopup4()">
+<table id="myTable4" style="width:100%">
+<tbody>
+ <tr>
+        <td>
+<a href="https://www.bankofamerica.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Bank of America</text></font></a>
+    </td> 
+    </tr>
+    <tr>
+        <td>
+<a href="https://www.discover.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Discover</text></font></a>
+    </td> 
+    </tr>
+    </tbody>
+    </table>
+    </span>
+</div>
+<!-- Popup 5 -->
+<body style="text-align:center">
+<div class="popup5">
+<span class="popuptext5" id="myPopup5" onmouseover="showpopup5()" onmouseout="removepopup5()">
+<table id="myTable5" style="width:100%">
+<tbody>
+ <tr>
+        <td>
+<a href="https://www.amazon.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Amazon</text></font></a>
+    </td> 
+    </tr>
+    <tr>
+        <td>
+<a href="https://github.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Github</text></font></a>
+    </td> 
+    </tr>
+        <tr>
+        <td>
+<a href="https://ideone.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Ideone</text></font></a>
+    </td> 
+    </tr>
+            <tr>
+        <td>
+<a href="https://facebook.com/" style="text-decoration:none"><font color="#946925"><text onmouseover="style.color='white'" onmouseout="style.color='#946925'">Facebook</text></font></a>
+    </td> 
+    </tr>
+    </tbody>
+    </table>
+    </span>
+</div>
+<!-- Initial Popup -->
+<script>
+// mouseover
+function showpopup() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.add("show");
+}
+</script>
+<script>
+// mouseout
+function removepopup() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.remove("show");
+}
+</script>
+
+<!-- Popup 2 -->
+<script>
+// mouseover
+function showpopup2() {
+    var popup2 = document.getElementById("myPopup2");
+    popup2.classList.add("show");
+}
+</script>
+<script>
+// mouseout
+function removepopup2() {
+    var popup2 = document.getElementById("myPopup2");
+    popup2.classList.remove("show");
+}
+</script>
+<!-- Popup 3 -->
+<script>
+// mouseover
+function showpopup3() {
+    var popup3 = document.getElementById("myPopup3");
+    popup3.classList.add("show");
+}
+</script>
+<script>
+// mouseout
+function removepopup3() {
+    var popup3 = document.getElementById("myPopup3");
+    popup3.classList.remove("show");
+}
+</script>
+<!-- Popup 4 -->
+<script>
+// mouseover
+function showpopup4() {
+    var popup4 = document.getElementById("myPopup4");
+    popup4.classList.add("show");
+}
+</script>
+<script>
+// mouseout
+function removepopup4() {
+    var popup4 = document.getElementById("myPopup4");
+    popup4.classList.remove("show");
+}
+</script>
+<!-- Popup 5 -->
+<script>
+// mouseover
+function showpopup5() {
+    var popup5 = document.getElementById("myPopup5");
+    popup5.classList.add("show");
+}
+</script>
+<script>
+// mouseout
+function removepopup5() {
+    var popup5 = document.getElementById("myPopup5");
+    popup5.classList.remove("show");
+}
+</script>
+</html>
